@@ -236,14 +236,6 @@ class bobguiListing extends frontControllerApplication
 		div.controlpanelonlyusers {border-top: 1px dashed #bbb; border-bottom: 1px dashed #bbb; padding: 10px 10px 3px 0; margin: 30px 0; background-image: linear-gradient(to top right, #FFFFFF 0%, #EEEEEE 100%);}
 		body div.controlpanelonlyusers h2 {margin-top: 0; padding-top: 0;}
 		div.controlpanelonlyusers p.limitedaccess {float: right; color: gray;}
-		
-		/* CUSU house style overrides */
-		h1 {padding-right: 11em; margin-top: 5px; margin-bottom: 1em;}
-		ul#page-list li {border: 0; padding: 0; margin: 0 1px 0 0;}
-		ul#page-list li a {background-color: #eee; padding: 5px 10px; border-right: 1px solid #bbb;}
-		ul#page-list li a:hover {background-color: #e7e7e7;}
-		ul.actions li a {padding-top: 6px; padding-bottom: 6px;}
-		table.selectlist td.value h2 a {color: #272425; border-bottom: 0;} 
 		';
 	}
 	
@@ -254,7 +246,7 @@ class bobguiListing extends frontControllerApplication
 		# Opening text
 		$html  = "\n" . '<h1>Welcome</h1>';
 		if ($this->settings['welcomeMessageHtml']) {
-			$html .= "\n" . $this->settings['welcomeMessageHtml'];
+			$html .= "\n" . file_get_contents(dirname (__FILE__) . '/../public_html/style/' . $this->settings['welcomeMessageHtml'], true);
 		} else {
 			$html .= "\n" . '<p>Welcome to the ' . ($this->settings['organisationName'] ? htmlspecialchars ($this->settings['organisationName']) . ' ' : '') . 'voting portal. Here you can submit a vote on ballots for which you have voting rights' . ($this->controlPanelLinkEnabled ? ($this->settings['controlPanelOnlyUsers'] ? '.<br />As an Administrator, you can also create ballots' : ', or create a new ballot if you run a University-based group') : '') . '.</p>';
 		}
@@ -264,8 +256,8 @@ class bobguiListing extends frontControllerApplication
 		$html .= $this->forthcomingBallotsListing ();
 		$html .= "\n<h2>Closed ballots</h2>";
 		$html .= "\n<ul class=\"actions left\">";
-		$html .= "\n\t<li><a href=\"{$this->baseUrl}/closed.html\"><img src=\"/images/icons/book.png\" alt=\"\" class=\"icon\" /> Recent ballots</a></li>";
-		$html .= "\n\t<li><a href=\"{$this->baseUrl}/archive.html\"><img src=\"/images/icons/book_addresses.png\" alt=\"\" class=\"icon\" /> Archive of all ballots</a></li>";
+		$html .= "\n\t<li><a href=\"{$this->baseUrl}/closed.html\">📚 Recent ballots</a></li>";
+		$html .= "\n\t<li><a href=\"{$this->baseUrl}/archive.html\">🗂️ Archive of all ballots</a></li>";
 		$html .= "\n</ul>";
 		if ($this->controlPanelLinkEnabled) {
 			$controlPanelLink = ($this->settings['controlPanelLinkDirectly'] ? $this->settings['controlPanelUrl'] : "{$this->baseUrl}/controlpanel.html");

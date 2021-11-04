@@ -2837,10 +2837,10 @@ class bobguiAdminister extends frontControllerApplication
 	function bestow ()
 	{
 		# End if not encrypted, as this emits personal data
-		if (!substr_count (PHP_OS, 'WIN')) {		// I.e. don't perform this test on a Windows development machine
-			if ($_SERVER['_SERVER_PROTOCOL_TYPE'] != 'https') {return false;}
-		}
-		
+		# if (!substr_count (PHP_OS, 'WIN')) {		// I.e. don't perform this test on a Windows development machine
+		# 	if ($_SERVER['_SERVER_PROTOCOL_TYPE'] != 'https') {return false;}
+		# }
+
 		# Check the API key is supplied and valid
 		if (!isSet ($_GET['key'])) {return false;}
 		if ($_GET['key'] != $this->settings['apiKey']) {return false;}
