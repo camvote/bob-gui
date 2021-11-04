@@ -1,6 +1,8 @@
 # BOB GUI
 
-This repository provides a GUI for listing and/or managing BOB ballot instances.
+This repository tracks the live code of https://camb.vote
+
+BOB-GUI provides a GUI for listing and/or managing BOB ballot instances.
 
 For more details of BOB, see
 https://github.com/cusu/bob
@@ -10,7 +12,6 @@ https://github.com/cusu/bob
 
 * Martin Lucas-Smith, Cambridge University Students' Union (initial code)
 * Martin Lucas-Smith, Department of Geography, University of Cambridge (improvements, as open-sourced)
-
 
 ## License
 
