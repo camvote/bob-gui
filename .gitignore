@@ -6,10 +6,10 @@ controlpanel/providers/
 public_html/controlpanel/logfile.txt
 
 # Ignore favicon if it exists
-public_html/favicon.ico
+#public_html/favicon.ico
 
 # Ignore any contents of the style folder, except its header and footer template
-public_html/style/*
+#public_html/style/*
 !public_html/style/header.html.template
 !public_html/style/footer.html.template
 
