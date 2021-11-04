@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {background-color: white;}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gradient code from http://www.colorzilla.com/gradient-editor/ and http://css3please.com/ and http://stackoverflow.com/questions/2869212/ */
+#backgroundcontainer {height: 800px;} /* Used to ensure the percentage gradients have a constant height, as otherwise the height of the page results in constant chnanges */
+#backgroundcontainer {
+	background: #ffffff;
+}
+
+
+#outercontainer {}
+#container {width: 984px; margin: 0 auto; background-color: white;}
+a#topanchor {display: none;}
+
+#header {
+  width: 100%;
+}
+
+#widgets, #menu {margin-left: 237px; margin-left: 237px; padding: 18px 20px 0 12px; font-size: 1.1em;}
+#menu ul, #widgets ul {list-style: none; margin: 0; padding: 0;}
+#menu ul li, #widgets ul li {display: inline; padding: 0 8px 0 3px; border-right: 1px solid #bdbfc1; text-transform: lowercase; white-space: nowrap;}
+#menu ul li:last-child, #widgets ul li:last-child {border-right: 0;}
+#menu ul li a, #widgets ul li a {text-decoration: none; color: #4a4848; font-weight: bold;}
+
+
+
+#widgets {height: 33px;}
+#widgets #minisearch {float: right;}
+#widgets ul li {border-right: 2px solid #85adde;}
+#widgets ul li a {color: white;}
+#widgets ul li * {display: inline; white-space: nowrap;}
+#widgets ul li option {display: block;}
+#widgets input, #widgets select {font-size: 0.93em; color: black;}
+#widgets select {border: 1px solid #85adde;}
+#widgets select, #widgets option {color: white; font-weight: bold;}
+#widgets form label {display: none;}
+#widgets input.button {font-size: 0.83em;}
+
+
+
+#menu {height: 56px; padding-top: 38px; background-color: white;}
+#menu li {line-height: 1.5em;}
+#menu ul li.selected a {border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 5px;}
+
+
+
+
+#submenu {clear: both; float: left; width: 128px; padding: 0 18px 0 18px; margin-top: 2.2em;}
+#submenu h2 {font-size: 1.25em;}
+#submenu h3 {font-size: 1.1em;}
+#submenu ul {list-style: none; margin: 0; padding: 0;}
+#submenu ul li {margin-top: 10px; font-weight: bold; padding: 0; margin: 0; font-size: 1em;}
+#submenu ul li:first-child {margin-top: 0;}
+#submenu ul li a {display: block; padding: 4px 2px 10px; border: 0;}
+
+
+#content {margin-left: 164px; min-height: 500px; padding-top: 0; padding-right: 18px; padding-bottom: 20px;}
+
+	
+/* Breadcrumb trail */
+#breadcrumb {height: 30px; padding: 0; margin: 0; color: #999; font-size: 0.87em;}
+
+
+/* Optional sidebar; the complexity here is due to requirements: (a) below <h1> in the code, (b) not overlapping, (c) copes with an imaged-<h1> that is full-width  */
+#content.withsidebar {position: relative; margin-right: 254px; padding-top: 65px; /* 30 (breadcrumb) + ~30 (heading) + 5 (extraspacing) */}
+#content.withsidebar.withheadingimage {padding-top: 225px; /* 30 (breadcrumb) + 200 (heading) - (5) adjustment */}
+#content.withsidebar #breadcrumb {position: absolute; z-index: 10; top: 0; left: 0;}
+#content.withsidebar h1 {position: absolute; z-index: 10; top: 30px; left: 0; width: 100%;}
+#content.withsidebar.withheadingimage h1 {width: 200px; /* 820px (actual content width) - 18px - 18px - 18px */}
+#mainsidebar {position: absolute; right: -254px; top: 1.25em; margin-right: 18px; width: 218px; padding: 0 0 0 18px; background-color: white; overflow: hidden;}
+#content.withsidebar.withheadingimage #mainsidebar {top: 230px;}
+
+/* Heading features */
+.withheadingimage h1 {background-repeat: no-repeat; background-position: top left; height: 180px; padding: 20px 18px 0 584px; width: auto; color: white; text-shadow: none; border: 0;}
+
+p.loggedinas {margin-left: 20px;}
+
+
+/* Footer */
+#footer {font-size: 0.83em; clear: both; width: auto; margin-top: 40px; padding: 10px 18px;}
+#footer p {margin-top: 0; margin-bottom: 0.4em;}
+#footer p, #footer p a {color: white;}
+#footer p.timestamp {float: right;}
+#footer a:hover {background-color: transparent;}
+#footerfade {height: 35px; width: 1010px; margin: 0 auto; background: url(/style/footer.png) top left no-repeat;}
+
+
+/* Colour theme: default blue */
+#header, #widgets select, #widgets option, .withheadingimage h1, #footer {background-color: #3c7b59;}
+h1, #mainsidebar h2, #menu ul li.selected a, .homepage #content h2 {border-bottom-color: #3c7b59;}
+a, #menu ul li.selected a {color: #6c9fd8;}
+
+
+/* Typography */
+body, textarea, input, select, checkbox, option {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {font-size: 87%; line-height: 1.25em; color: #222; margin: 0px; padding: 0px; width: 100%;}
+
+textarea, input, select, checkbox, option {font-size: 100%; color: #900;}
+
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {color: #272425;}
+h1 {font-size: 2rem; color: #fff;}
+h1, #mainsidebar h2, .homepage #content h2 {border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 6px;}
+h2 {font-size: 1.3em; margin-top: 1.7em;}
+h3 {font-size: 1em;}
+
+
+p, ul {color: #111; margin-top: 1em; margin-bottom: 1em;}
+
+/* Lists */
+ul {padding-left: 30px; list-style-position: outside; margin-left: 0;}
+ul ul {margin-top: 0em; list-style-type: disc; padding-left: 20px;}
+li {margin-left: 0;}
+dt {margin-top: 1.7em;}
+dd {margin-top: 0.5em;}
+
+/* Search */
+.search dt a {font-weight: bold; font-size: 1.1em;}
+
+/* Links */
+a {text-decoration: none; border-bottom: 1px solid #eee;}
+a:hover {background-color: #eee;}
+#header ul li a, #logo a, #footer a {border: 0;}
+#header ul li a:hover {background-color: transparent;}
+
+
+/*
+.float {float: right; margin-left: 1em; width: 196px; margin-top: 0em;}
+*/
+
+/* Misc */
+blockquote {font-style: italic;}
+
+
+/* Sidebar */
+#mainsidebar {font-size: 0.83em;}
+
+/* Sidebar: Twitter feed */
+#mainsidebar ul.tweets {list-style-type: none; margin: 5px 0; padding: 5px 0;}
+#mainsidebar ul.tweets li {list-style: none; margin-top: 0.7em;}
+#mainsidebar ul.tweets li span.date {color: gray;}
+
+#mainsidebar ul#socialnetworkinglinks {list-style-type: none;}
+#mainsidebar ul#socialnetworkinglinks li {text-align: right; padding-bottom: 2px;}
+#mainsidebar ul#socialnetworkinglinks li a {display: block; border: 0; color: #555; font-size: 1.3em; font-weight: bold; height: 25px; line-height: 25px; padding: 3px 32px 3px 0; background-position: middle right; background-repeat: no-repeat;}
+#mainsidebar ul#socialnetworkinglinks li a:hover {background-color: transparent;}
+
+/* Sidebar: people */
+#mainsidebar #people {margin-bottom: 20px; overflow: hidden;}	/* Clears the float afterwards */
+#mainsidebar div.person {width: 66px; height: 120px; float: left; margin-right: 6px;}
+#mainsidebar div.person img {width: 100%; height: 88px; border: 0;}
+#mainsidebar div.person p {font-style: italic; font-size: 0.87em; padding: 2px 0 10px; margin: 0; line-height: 1.2em;}
+#mainsidebar div.person a {border: 0; color: gray; background-color: transparent;}
+
+/* Sidebar: events@cam feeds */
+#mainsidebar #eventscamfeed {padding: 7px;}
+#mainsidebar #eventscamfeed p.eventscamfeedimage {padding: 0;}
+#mainsidebar #eventscamfeed p.eventscamfeedimage a {border: 0;}
+#mainsidebar #eventscamfeed h4 {margin: 8px 0 0; padding: 0; line-height: 1.3em;}
+#mainsidebar #eventscamfeed h4 a {color: #005bb4;}
+#mainsidebar #eventscamfeed p {margin: 0; padding: 4px 0 0; color: #999; font-size: 0.9em; line-height: 1.1em;}
+#mainsidebar #eventscamfeed em {font-style: normal;}
+#mainsidebar #eventscamfeed p.eventscamfeedtagline {padding-top: 1.5em; color: #333;}
+
+
+
+
+
+/* Section menu used to provide links to all pages in one sub-section */
+#sectionmenu {width: 30%; margin-top: 30px; float: right; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+#sectionmenu ul {list-style: none; margin: 0;}
+#sectionmenu {width: 30%; margin-top: 30px; float: right; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; margin-left: 20px; padding: 0 0 0.8em 0.8em;}
+#sectionmenu ul {list-style: none; padding: 0; margin: 0;}
+#sectionmenu ul li {line-height: 1.2em; margin: 0.5em 0;}
+#sectionmenu ul li a {font-weight: bold; font-weight: bold; border-bottom: 0; margin: 0 5px; display: block; width: 100%;}
+#sectionmenu ul li li a {margin-left: 1.8em; font-weight: normal; border: 0;}
+
+/* Tabbed applications */
+ul.tabs {font-size: 0.9em; padding-bottom: 5px;}
+ul.tabs li a {border-radius: 3px 3px 0 0;}
+ul.tabs li a {-moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0;} /* Vendor-specific hacks */
+ul.tabs li a img {position: relative; top: 2px;}
+
+
+
+/* Specific editor changes from the default */
+#purecontenteditor {font-size: 0.83em;}
+
+
+/* Print layout overrides */
+@media print {
+	#menu, #breadcrumb, #header, .hideonprint {display: none;}
+	body {font-family: "Times New Roman", Times, serif;}
+	.float {float: right; margin-left: 1em; width: 30%; margin-top: 0;}
+	a {text-decoration: none; color: black;}
+	/* Hacks */
+	.clearfix {margin-bottom: 1em;}
+	.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+}
+
+
+/* Mobile layout overrides */
+@media screen and (max-width: 480px) {
+	
+	/* Style */
+	body {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: none;}	/* Turn off font resizing */
+	html, body, #backgroundcontainer {padding: 0; margin: 0;}
+	body, #backgroundcontainer, #outercontainer, #container, #header, #widgets, #widgets ul, #menu, #content, #footer, #footerfade {width: auto;}
+	#header {height: auto;}
+	#widgets ul li span {display: none;}
+	#widgets ul li {border-right: 0;}
+	#widgets ul li .jumplist {display: none; clear: both; margin-top: 50px;}
+	#menu, #content {padding: 5px 20px;}
+	#menu {clear: both; width: auto; height: auto; margin: 0;}
+	#menu ul {line-height: 2.1em;}
+	#submenu {display: none;}
+	body h1 {clear: both; padding-right: 0;}
+	#content {clear: both; margin-left: 0; margin: 0;}
+	body div.graybox {margin: 0;}
+	input[type="submit"] {padding: 10px; -webkit-appearance: none; -moz-appearance: none; border-radius: 4px; font-size: 1.2em;}
+	
+	/* Listing */
+	body table.selectlist td.key {padding-right: 25px; text-align: right; width: auto;}
+	body table.selectlist td.key img {max-width: 80px; height: auto;}
+	
+	/* Voting */
+	body div.graybox {width: auto; overflow: visible;}
+}
+

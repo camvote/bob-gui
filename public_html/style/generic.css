@@ -1,0 +1,137 @@
+/* Common stylesheet used by all sites on the server */
+
+/* Body, layout and visibility */
+#standards, p.standards, p.skipnavigation {display: none;}
+p.timestamp {text-align: right;}
+
+/* Tables */
+th {font-weight: bold; text-align: left;}
+table caption {line-height: 1.2em;}
+table td.highlighted {background-color: #ccfe; font-weight: bold;}
+
+/* 'Lines' table style */
+table.lines {border-collapse: collapse; /* width: 95%; */}
+.lines td, .lines th {border-bottom: 1px solid #e9e9e9; padding: 6px 4px 2px; vertical-align: top; text-align: left;}
+/* .lines td:first-child, .lines th:first-child {width: 150px;} */
+.lines tr:first-child {border-top: 1px solid #e9e9e9;}
+.lines td h3 {text-align: left; padding-top: 20px;}
+.lines p {text-align: left;}
+.lines td.noline {border-bottom: 0;}
+table.lines td.value p:first-child {margin-top: 0;}
+table.lines td.value p:last-child {margin-bottom: 0;}
+table.lines td:last-child ul:first-child {margin-top: 0;}
+table.lines td:last-child ul:first-child li:first-child {margin-top: 0;}
+table th.background, table td.background {background-color: #eee;}
+table th.border, table td.border {border: 1px solid gray;}
+
+table.compressed td {padding: 0 4px;}
+table.spaced td {padding: 8px 4px;}
+table tr.spaced td {padding-top: 2em;}
+table tr.grouplast td {padding-bottom: 2em;}
+table.small td {font-size: 11px;}	/* #!# Doesn't work because .small below overrides */
+table.alternate tr:nth-child(odd) td {background-color: #d8e7e9;}
+table.lines.regulated td.key, table.lines.regulated td:first-child {width: 150px;}
+.lines td.noline, table.noline td, table.lines.noline tr:first-child {border-bottom: 0; border-top: 0;}
+table.rightkey td.key {text-align: right;}
+
+
+/* Boxes */
+/* Yellow box with dotted top/bottom */	div.box {border-top: 1px dashed gray; border-bottom: 1px dashed gray; padding: 10px 5px; margin: 8px 0;}
+										div.box, div.box td {background-color: #fff9e3;}
+/* Basic, gray solid-edged box */		div.basicbox {border: 1px dotted gray; padding: 12px; margin-top: 5px;}
+/* Red solid-edged box */				div.announcement, div.warningbox {border: 1px solid red; padding: 4px 8px; margin-top: 5px; margin-bottom: 10px;}
+/* Right-floated mini-menu */			div.contextbox {float: right; width: 20%; border: 1px dashed gray; margin: 0 0 30px 15px; padding: 10px;}
+/* Right-floated mini-menu */			div.contextbox2 {float: right; width: 25%; border-left: 1px dashed #ccc; margin: 0 0 30px 15px; padding: 10px;}
+div.contextbox2 ul {margin-left: 15px;}
+
+div.graybox {border: 1px solid #ddd; padding: 10px 15px; margin: 0 10px 10px 0; background-color: #fcfcfc;}
+div.graybox:hover {background-color: #fafafa; border-color: #aaa;}
+div.graybox h2, div.graybox h3 {margin-top: 0.4em;}
+div.graybox p {text-align: left; margin-top: 10px;}
+/* div.graybox img {border: 1px solid #999; margin-right: 10px;} */
+p.yellowwarning {border: 1px solid #fc9; background-color: #ffc; padding: 5px;}
+
+/* Warning and note colourings */
+.error, .important, .warning, .failure {color: red;}
+.pleasenote {color: #990000;}
+.success {color: green;}
+.faded {color: #bbb/*#666*/;}
+.highlight, .highlight td {background-color: #ff9;}
+.comment {color: #777;}
+.warningreminder {border: 2px dotted red; padding: 8px; margin-bottom: 50px;}
+span.new {color: #cc3366;}
+
+/* Signature */
+p.signature {text-align: right; font-style: italic;}
+
+/* Lists, paragraphs and threads */
+.compact li, li.compact {margin-top: 0; margin-bottom: 0;}
+.spaced li, li.spaced {margin-top: 12px;}
+.spaced .normal li, .spaced li.normal {margin-top: 3px;}
+p.spaced {margin-top: 3em;}
+.heavilyspaced li, li.heavilyspaced {margin-top: 24px;}
+ul.nobullet {list-style-type: none; margin: 0; padding: 0;}
+ul.nobullet li {list-style: none;}
+ul.inline, ul.thread, ul.sectionmenu, .sectionmenu ul {margin: 10px 0 20px; padding: 0;}
+ul.inline li, ul.thread li, ul.sectionmenu li, .sectionmenu ul li {display: inline; list-style-type: none; padding: 0 10px;}
+ul.sectionmenu, .sectionmenu ul, ul.thread {border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; text-align: center;}
+div.splitlist ul {float: left; margin-left: 10px; padding-left: 20px; margin-bottom: 20px;}
+ul.sectionmenu li a {white-space: nowrap;}
+ul.projectlist li {font-weight: bold; margin-top: 1em;}
+ul.projectlist li li {font-weight: normal; margin-top: 0;}
+ul.boxylist {margin-left: 0; padding-left: 0;}
+ul.boxylist li {list-style-type: none; border: 1px solid #ccc; background-color: #f1f1f1; width: 50%; margin-top: 0.5em;}
+ul.boxylist li a {display: block; padding: 8px}
+table.splitlist {table-layout: fixed;}
+table.splitlist td {width: 30%  /* 30% is a reasonably safe approximation */ ; padding-right: 1em; vertical-align: top;}
+table.splitlist td ul li {text-align: left;}
+dl.spaced dt {margin-top: 1.2em; font-weight: bold;}
+dl.spaced dd {margin-top: 0.5em;}
+
+/* Acronyms, 
+abbreviations, definitions */
+acronym, abbr, defn {cursor: help; border-bottom: 1px dotted #000;}
+
+/* Images (with or without caption) */
+/* NB div's can't be used instead of tables [perhaps until p+p is supported by IE] because the size of the image changes, so the text wouldn't line up */
+.diagram, .photo {margin: 8px 0;} /* Default, overriden in following lines */
+.diagram *, .photo * {background-color: white;}
+.centre {display: block; margin-left: auto; margin-right: auto;}
+.left {float: left; margin-right: 12px;}
+.right {float: right; margin-left: 12px;}
+
+/* Action buttons, for use with icons from www.famfamfam.com */
+ul.actions {margin: 0; padding: 0; float: right; display: block;}
+ul.actions.inline {float: none; margin-top: 2em;}
+ul.actions li {list-style: none; margin-bottom: 1px;}
+ul.actions.inline li {display: inline; margin-right: 5px;}
+ul.actions li a, ul.actions li form, p.actions a, a.actions, ul.actions li span.actions {border-bottom: 0; border: 1px solid #ddd; padding: 4px 8px 2px; -moz-border-radius: 4px; -webkit-border-radius: 4px; width: 185px;}
+ul.actions li form, ul.actions li span.actions {padding: 0; width: /* 185px + 2*8px = */ 201px;}
+ul.actions li form input, ul.actions li span.actions {width: 100%; border: 0; background-color: white; text-align: left; padding: 4px 8px 2px;}
+ul.actions li a, ul.actions li form input.action, ul.actions li span.actions {display: block;}
+p.actions a, a.actions {padding: 10px 8px 2px;}
+ul.actions.inline li a {display: inline; width: auto;}
+ul.actions li a:hover, ul.actions li form:hover, a.actions:hover {border-color: #aaa;}
+ul.actions li form input:hover {cursor: pointer; cursor: hand;} /* See http://www.quirksmode.org/css/cursor.html#note */
+ul.actions li a img, a.actions img {vertical-align: top; width: 16px; height: 16px; border: 0;}
+img.icon {width: 16px; height: 16px; border: 0; vertical-align: middle;}
+
+ul.actions li a, p.actions a {border-bottom: 0; border: 1px solid #ddd; padding: 4px 8px 2px; -moz-border-radius: 4px; width: 185px;}
+ul.actions li a {display: block;}
+ul.actions.left {float: none;}
+p.actions a {padding: 10px 8px 2px;}
+
+/* Generic applications */
+p.loggedinas {float: right; font-size: 0.91em; text-align: right;}
+ul.tabs {padding: 3px 0 4px 2px; margin-left: 0; margin-bottom: 1.5em; border-bottom: 1px solid #778; line-height: 1em;}
+ul.tabs li {list-style: none; margin: 0; display: inline;}
+ul.tabs li a {padding: 3px 0.5em; margin-left: 2px; border: 1px solid #778; border-bottom: none; background: #f7f7f7; text-decoration: none;}
+ul.tabs li a:link {color: #448;}
+ul.tabs li a:visited {color: #667;}
+ul.tabs li a:hover {color: #000; background: #eee; border-color: #227;}
+ul.tabs li.selected a {background: white; border-bottom: 1px solid white;}
+ul.tabs img {border: 0; vertical-align: bottom; padding: 0;}
+ul.tabs li select {margin-bottom: 1em;}
+ul.tabs li select option {color: #603;}
+ul.subtabs {padding: 0 0 2px 2px;}
+ul.subtabs li a {border-style: dotted; border-bottom: none; padding: 0 0.5em;}
