@@ -163,7 +163,18 @@ ul.actions li.showvotes a {
   background-image: none;
 }
 
-@media (max-width: 880px) {
+.name-list {
+  padding-left: 1rem;
+  list-style: none;
+  border-left: #115E67 solid 0.3rem;
+  margin: 1rem 0;
+}
+
+.name-list > li {
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 900px) {
   .page-list {
     flex-direction: column;
   }
