@@ -1,7 +1,7 @@
 # Ignore the instantiated copy of the bootstrap files
 config.php
 controlpanel/logfile.txt
-controlpanel/providers.php
+#controlpanel/providers.php
 controlpanel/providers/
 public_html/controlpanel/logfile.txt
 
