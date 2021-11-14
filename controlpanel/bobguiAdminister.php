@@ -569,7 +569,7 @@ class bobguiAdminister extends frontControllerApplication
 			<li>Your constitution must require votes to be counted using <strong>" . htmlspecialchars ($this->supportedCountingMethods[$this->settings['countingMethod']]) . "</strong>. This system cannot run first-past-the-post ballots.</li>
 			<li>You must have <strong>a spreadsheet of all your voters</strong>, containing their University usernames.</li>
 			<li>All voters must have a Raven account.</li>
-			" . ($this->cautionAboutSensitiveBallots ? "<li>Do not use this system for elections where the only ballot is for an LGBT officer, i.e. where making the list of those who have voted would not be acceptable. (Please contact {$this->settings['administratorEmail']} to discuss this.)</li>" : '') . "
+			" . ($this->cautionAboutSensitiveBallots ? "<li>Do not use this system for elections where making the list of those who have voted would not be acceptable - e.g. an election only for an LGBT Officer. For an election with multiple positions, it is not possible to see who voted for which roles, but it is possible to see whether someone voted at all or not. (Please contact {$this->settings['administratorEmail']} to discuss this.)</li>" : '') . "
 		</ol>";
 		
 		# Return the HTML
