@@ -138,9 +138,9 @@ class bobguiIngest
 		
 		# End if the lock file is present
 		if (file_exists ($this->settings['lockFile'])) {
-			$this->errors[] = 'The lock file exists so the ingest process cannot run.';
+			$this->errors[] = 'The lock file exists - WARNING but running anyway (leftover from previous run?).';
 			$this->reportErrors ();
-			return false;
+			#return false;
 		}
 		
 		# Ensure the log file exists and is writable
