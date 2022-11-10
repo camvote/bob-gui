@@ -35,12 +35,7 @@ echo file_get_contents(__DIR__ . "/style/header.html");
 
 <h3>Current Members</h3>
 <ul class="name-list members-list">
-  <li>Queens' College JCR</li>
-  <li>Magdalene College JCR</li>
-  <li>Fitzwilliam JCR</li>
-  <li>King's College Student Union</li>
-  <li>Jesus College Student Union <b>(Interim Chair)</b></li>
-  <li>St John's College JCR</li>
+  <li>The full list of members is pending. Please refer to the invitation for a list of members who currently intend to join.</li>
 </ul>
 <p>
 The COVS is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of the COVS, and support it financially.
