@@ -18,20 +18,19 @@ echo file_get_contents(__DIR__ . "/style/header.html");
   - <b>Open-source:</b> The source code for CSES is <a href="https://github.com/qjcr/bob">publicly</a> <a href="https://github.com/qjcr/bob-gui">available</a> under a permissive GPL license, and we welcome contributions and reviews by anyone.
 </p>
 <p>
-  The CSES is hosted on a physical server hosted within the University's data network. The website is hosted behind Cloudflare.
+  The CSES is hosted on a virtual server hosted in Cambridge, with <a href="https://www.mythic-beasts.com/">Mythic Beasts</a>.
 </p>
 
 <h3>Current Sysadmins</h3>
 <ul class="name-list sysadmin-list">
-  <li><a href="mailto:bpc38@cam.ac.uk">Brendan Coll</a> (Queens College JCR, Computer Officer)</li>
-  <li><a href="mailto:car83@cam.ac.uk">Cameron Robey</a> (St John's College, Unaffiliated)</li>
-  <li><a href="mailto:mb2345@cam.ac.uk">Mikel Bober-Irizar</a> (Queens College JCR, Accommodation & Facilities Officer)</li>
+  <li><a href="mailto:lw664+cses@cam.ac.uk">Lewis Westwood Flood</a> (Jesus College Student Union)</li>
+  <li><a href="mailto:mb2345@cam.ac.uk">Mikel Bober-Irizar</a> (Queen's College JCR)</li>
 </ul>
 
 <p><em>
-  These users have access to the physical CSES server. This server is hardened and setup with audit trails such that any tampering would be obvious to the other sysadmins. In the long term, we would like to move to a security architecture where no students are single-handedly capable of making system changes.
+  These users have access to the CSES server. This server is hardened and setup with audit trails such that any tampering would be obvious to the other sysadmins. In the long term, we would like to move to a security architecture where no students are single-handedly capable of making system changes.
 <br>
-  While sysadmins have access to the server and code running on it, the system of vote verification means that a sysadmin would never be able to tamper with votes without this being verifiable by voters and returning officers.
+  While sysadmins have access to the server and code running on it, the system of vote verification means that a sysadmin would never be able to tamper with votes without this being verifiable by voters and returning officers. SysAdmins are elected by the Consortium at its Annual Meeting.
 </em></p>
 
 <h3>Current Members</h3>
@@ -40,9 +39,14 @@ echo file_get_contents(__DIR__ . "/style/header.html");
   <li>Magdalene College JCR</li>
   <li>Fitzwilliam JCR</li>
   <li>King's College Student Union</li>
-  <li>Jesus College Student Union</li>
+  <li>Jesus College Student Union <b>(Interim Chair)</b></li>
   <li>St John's College JCR</li>
 </ul>
+<p>
+The CSES is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of the CSES, and support it financially.
+<br>
+If you're interested in joining the Consortium, email lw664+cses@cam.ac.uk.
+</p>
 
 <?php
 echo file_get_contents(__DIR__ . "/style/footer.html");
