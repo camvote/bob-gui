@@ -101,7 +101,7 @@ class bobguiIngest
 			
 			# Expected launch time in minutes past the hour, and number of seconds either side of 30 minutes past the hour that this can run
 			'launchTimeMinutes' => 30,
-			'launchTimeMismatch' => 120,	// 2 minutes drift
+			'launchTimeMismatch' => 99999,	// 2 minutes drift
 			'maximumAcceptableScriptExecutionTime' => 300,	// 5 minutes; allows for the bestow end to be slow in bestowing
 			
 			# Set the number of seconds representing an acceptable timestamp mismatch between the bestow data and the local time
@@ -225,11 +225,13 @@ class bobguiIngest
 	{
 		# Get the new instances data from the setup server
 		$instanceDataUrl = $this->settings['instanceDataUrl'] . '?key=' . $this->settings['instanceDataApiKey'];
+		print($instanceDataUrl);
 		if (!$data = file_get_contents ($instanceDataUrl)) {
 			$this->errors[] = 'There was a problem obtaining the instance data.';
 			$this->reportErrors ();
 			return false;
 		}
+		print($data);
 		$this->logMessage ('START Checkpoint 1: Instance data obtained; string length = ' . strlen ($data));
 		
 		# Decode the string of new data back into an array
@@ -384,9 +386,10 @@ class bobguiIngest
 		# Get the list of instance IDs in the live datasource
 		$query = "SELECT id FROM {$this->dataSourceLive};";
 		if (!$instancesLive = $this->databaseConnection->getData ($query, $this->dataSourceLive)) {
-			$this->errors[] = "The list of live instance IDs could not be retrieved or was empty. The database server said:\n" . print_r ($this->databaseConnection->error (), true) /* . "\nThe data was:\n" . print_r ($instance['voters'], true) */;	// Data not currently shown as it could be very large!
-			$this->reportErrors ();
-			return false;
+			$this->logMessage("WARNING: The list of live instance IDs could not be retrieved or was empty. The database server said:\n" . print_r ($this->databaseConnection->error (), true)) /* . "\nThe data was:\n" . print_r ($instance['voters'], true) */;	// Data not currently shown as it could be very large!
+#			$this->errors[] = "The list of live instance IDs could not be retrieved or was empty. The database server said:\n" . print_r ($this->databaseConnection->error (), true) /* . "\nThe data was:\n" . print_r ($instance['voters'], true) */;	// Data not currently shown as it could be very large!
+#			$this->reportErrors ();
+#			return false;
 		}
 		
 		# Check that each instance does not appear in the list of live instances
