@@ -35,7 +35,12 @@ echo file_get_contents(__DIR__ . "/style/header.html");
 
 <h3>Current Members</h3>
 <ul class="name-list members-list">
-  <li>The full list of members is pending. Please refer to the invitation for a list of members who currently intend to join.</li>
+  <li>Jesus College Student Union (Chair, 2023)</li>
+  <li>Queens' College JCR (Auditor, 2023)</li>
+  <li>Robinson College Student Association</li>
+  <li>King's College Student Union</li>
+  <li>Lucy Cavendish JCR</li>
+  <li>Trinity College Student Union</li>
 </ul>
 <p>
 The COVS is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of the COVS, and support it financially.
