@@ -2,8 +2,8 @@
 echo file_get_contents(__DIR__ . "/style/header.html");
 ?>
 
-<h1>About Cambridge Online Voting System</h1>
-<h3>Why COVS over CamSU's voting system?</h3>
+<h1>About CamVote</h1>
+<h3>Why CamVote over CamSU's voting system?</h3>
 <p>
   - <b>Field-tested:</b> We use the open-source BoB system which has been used for thousands of elections over more than a decade throughout the university, without challenge. This system was built by David Eyers, Martin Lucas-Smith, David Turner, Simon Hopkins and Robin Whittaker. This system used to live at <a href="https://vote.cusu.cam.ac.uk/">https://vote.cusu.cam.ac.uk/</a>, but was retired in 2021 by CamSU.</p>
 <p>
@@ -13,12 +13,12 @@ echo file_get_contents(__DIR__ . "/style/header.html");
   - <b>Verifiability:</b> The voting token system employed by BoB allows any individual to verify that their vote has been correctly included in the vote count - you do not have to trust the system to know that your vote has been correctly counted. In CamSU's election system, votes could be forged by an evil sysadmin (or indeed, the manual voting system is prone to mistakes or forged votes).
 </p>
 <p>
-  - <b>Instant counts:</b> As COVS vote counting happens automatically, results are instantly available at the end of an election. No waiting for someone to email you your election results.
+  - <b>Instant counts:</b> As CamVote vote counting happens automatically, results are instantly available at the end of an election. No waiting for someone to email you your election results.
 <p>
-  - <b>Open-source:</b> The source code for COVS is <a href="https://github.com/camvote/bob">publicly</a> <a href="https://github.com/camvote/bob-gui">available</a> under a permissive GPL license, and we welcome contributions and reviews by anyone.
+  - <b>Open-source:</b> The source code for CamVote is <a href="https://github.com/camvote/bob">publicly</a> <a href="https://github.com/camvote/bob-gui">available</a> under a permissive GPL license, and we welcome contributions and reviews by anyone.
 </p>
 <p>
-  The COVS is hosted on a virtual server hosted in Cambridge, with <a href="https://www.mythic-beasts.com/">Mythic Beasts</a>.
+  CamVote is hosted on a virtual server hosted in Cambridge, with <a href="https://www.mythic-beasts.com/">Mythic Beasts</a>.
 </p>
 
 <h3>Current Sysadmins</h3>
@@ -28,7 +28,7 @@ echo file_get_contents(__DIR__ . "/style/header.html");
 </ul>
 
 <p><em>
-  These users have access to the COVS server. This server is hardened and setup with audit trails such that any tampering would be obvious to the other sysadmins. In the long term, we would like to move to a security architecture where no students are single-handedly capable of making system changes.
+  These users have access to the CamVote server. This server is hardened and setup with audit trails such that any tampering would be obvious to the other sysadmins. In the long term, we would like to move to a security architecture where no students are single-handedly capable of making system changes.
 <br>
   While sysadmins have access to the server and code running on it, the system of vote verification means that a sysadmin would never be able to tamper with votes without this being verifiable by voters and returning officers. SysAdmins are elected by the Consortium at its Annual Meeting.
 </em></p>
@@ -43,7 +43,7 @@ echo file_get_contents(__DIR__ . "/style/header.html");
   <li>Trinity College Student Union</li>
 </ul>
 <p>
-The COVS is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of the COVS, and support it financially.
+CamVote is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of CamVote, and support it financially.
 <br>
 If you're interested in joining the Consortium, email lw664+cses@cam.ac.uk.
 </p>
