@@ -40,7 +40,9 @@ echo file_get_contents(__DIR__ . "/style/header.html");
   <li>Robinson College Student Association</li>
   <li>King's College Student Union</li>
   <li>Lucy Cavendish JCR</li>
-  <li>Trinity College Student Union</li>
+  <li>Lucy Cavendish MCR</li>
+  <li>Churchill College JCR</li>
+  <li>Newnham College JCR</li>
 </ul>
 <p>
 CamVote is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of CamVote, and support it financially.
