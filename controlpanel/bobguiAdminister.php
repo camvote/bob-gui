@@ -1930,7 +1930,7 @@ class bobguiAdminister extends frontControllerApplication
 			'display'	=> 'paragraphs',
 			'displayRestrictions' => false,
 		));
-		$form->heading ('', '<p>This form lets you delete the following ballot configuration' . ($totalVoters ? ' and the list of voters' : '') . '. This <strong>cannot</strong> be done.</p>');
+		$form->heading ('', '<p>This form lets you delete the following ballot configuration' . ($totalVoters ? ' and the list of voters' : '') . '. This <strong>cannot</strong> be undone.</p>');
 		$form->heading ('', "<p>If you don't want to do this, return to the <a href=\"{$this->baseUrl}{$ballot['url']}\">Ballot editing options page</a>.</p>");
 		$form->heading (3, 'Deletion form');
 		$form->heading ('', "<p>This form will delete the following ballot:</p>");
