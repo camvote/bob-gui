@@ -20,6 +20,6 @@ The code is licensed under the version 2 of the GPL, except where individual fil
 
 ## Deployment
 
-See [https://github.com/cusu/bob-gui-deploy](https://github.com/camvote/bob-gui-deploy)
+See [here](https://github.com/camvote/bob-gui-deploy)
 
 Set your VirtualHost's DOCUMENT_ROOT to the path of the public_html directory.
