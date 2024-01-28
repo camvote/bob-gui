@@ -1,12 +1,11 @@
 # BOB GUI
 
-This repository tracks the live production code of https://camb.vote, including deployment-specific code.
+This repository tracks the live production code of https://camvote.org, including deployment-specific code.
 
 BOB-GUI provides a GUI for listing and/or managing BOB ballot instances.
 
 For more details of BOB, see
-https://github.com/cusu/bob
-
+https://github.com/camvote/bob
 
 ## Credits
 
