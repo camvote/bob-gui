@@ -22,8 +22,9 @@ echo file_get_contents(__DIR__ . "/style/header.html");
 </p>
 
 <h3>Current Sysadmins</h3>
+<b>We are actively looking for new SysAdmins - please contact us at sysadmins@camvote.org if you would be willing to help out.</b>
 <ul class="name-list sysadmin-list">
-  <li><a href="mailto:lw664+cses@cam.ac.uk">Lewis Westwood Flood</a> (Jesus College Student Union)</li>
+  <li><a href="mailto:lw664+camvote@cantab.ac.uk">Lewis Westwood Flood</a> (Jesus College Student Union)</li>
   <li><a href="mailto:mb2345@cam.ac.uk">Mikel Bober-Irizar</a> (Queen's College JCR)</li>
 </ul>
 
@@ -47,7 +48,7 @@ echo file_get_contents(__DIR__ . "/style/header.html");
 <p>
 CamVote is provided by the Cambridge Online Voting Consortium. The Consortium's members are ultimately responsible for the governance of CamVote, and support it financially.
 <br>
-If you're interested in joining the Consortium, email lw664+cses@cam.ac.uk.
+If you're interested in joining the Consortium, email sysadmins@camvote.org.
 </p>
 
 <?php
