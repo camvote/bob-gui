@@ -200,12 +200,6 @@ class bobguiAdminister extends frontControllerApplication
 				'description' => 'Submit / view votes',
 				'authentication' => false,
 			),
-			'feedback' => array (
-				'tab' => '',
-				'icon' => 'email',
-				'description' => 'Feedback',
-				'authentication' => false,
-			),
 			'organisation' => array (
 				'description' => false,
 				'authentication' => true,
@@ -622,7 +616,7 @@ class bobguiAdminister extends frontControllerApplication
 		
 		# Assemble the HTML
 		$html  = "<h2>How it works</h2>
-		<p>We hope to answer all your questions here about how to set up votes, and what is and is not possible.<br />If you have any questions, please do not hesitate to <a href=\"{$this->baseUrl}/feedback.html\">contact the System Administrator</a>.</p>
+		<p>We hope to answer all your questions here about how to set up votes, and what is and is not possible.<br />If you have any questions, please do not hesitate to <a href=\"mailto:sysadmins@camvote.org\">contact the System Administrator</a>.</p>
 		<p>Jump below to:</p>
 		<ul>
 			<li><a href=\"#overview\">Overview</a></li>
@@ -697,7 +691,7 @@ class bobguiAdminister extends frontControllerApplication
 		" . ($this->settings['faqAdditionalEntry'] ? "\n\n<h3 id=\"additional\">{$this->settings['faqAdditionalEntry'][0]}</h3>\n<p>{$this->settings['faqAdditionalEntry'][1]}</p>" : '') . "
 		
 		<h3 id=\"feedback\">Feedback</h3>
-		<p>We welcome any <a href=\"{$this->baseUrl}/feedback.html\">feedback</a> on this system or this documentation, including any suggestions for improvement.</p>";
+		<p>We welcome any <a href=\"mailto:sysadmins@camvote.org\">feedback</a> on this system or this documentation, including any suggestions for improvement.</p>";
 		
 		# Show the HTML
 		echo $html;
@@ -722,7 +716,7 @@ class bobguiAdminister extends frontControllerApplication
 		<ul>
 			<li><a href=\"{$this->baseUrl}/security.pdf\">Voting system security architecture</a></li>
 		</ul>
-		<p>If you have questions on any points not mentioned in the documentation, do <a href=\"{$this->baseUrl}/feedback.html\">get in touch</a> and we will update the documentation.</p>
+		<p>If you have questions on any points not mentioned in the documentation, do <a href=\"mailto:sysadmins@camvote.org\">get in touch</a> and we will update the documentation.</p>
 		";
 		
 		# Show the HTML
@@ -1854,7 +1848,7 @@ class bobguiAdminister extends frontControllerApplication
 		<p>This page aims to describe, for the benefit of the Returning Officer, how the voting process works. </p>
 		" . ($ballotUrl ? '' : "<p>You'll get a customised version of these instructions (containing links), via the Administer page, if/when you've created a vote.</p>") . "
 		<p>The main public <a href=\"{$this->baseUrl}/about.html\"><img src=\"/images/icons/help.png\" alt=\"\" class=\"icon\" /> How it works</a> page gives more information, but the main information of relevance to the Returning Officer is as follows:</p>
-		<p>If, having read all of this page, you have any questions, please do <a href=\"{$this->baseUrl}/feedback.html\">contact us</a>.</p>
+		<p>If, having read all of this page, you have any questions, please do <a href=\"mailto:sysadmins@camvote.org\">contact us</a>.</p>
 		<h3>1. Setup</h3>
 		<ol type=\"a\">
 			<li>You should start by clicking on the 'add a new ballot' link.</li>
@@ -2641,7 +2635,7 @@ class bobguiAdminister extends frontControllerApplication
 			# Add the title for this type of provider, if multiple organisations are expected
 			if (!$this->settings['singleOrganisationMode']) {
 				$html .= "\n<h3 class=\"selectlist\">" . htmlspecialchars ($providerMetadata[$providerId]['name']) . ':</h3>';
-				$html .= "\n<p>" . ($organisations ? "If you think you should be the manager for a {$providerMetadata[$providerId]['typeSingularUcfirst']} not listed here" : "You do not appear to be not registered as the manager for any {$providerMetadata[$providerId]['typeSingularUcfirst']}.<br />If you think you should be") . ", please " . ($providerMetadata[$providerId]['managerClaimFormLocation'] ? "use the <a href=\"{$providerMetadata[$providerId]['baseUrl']}{$providerMetadata[$providerId]['managerClaimFormLocation']}\">{$providerMetadata[$providerId]['typeSingularUcfirst']} manager claim form</a> elsewhere on the website.</p>" : "<a href=\"{$this->baseUrl}/feedback.html\">contact the system administrator</a>.");
+				$html .= "\n<p>" . ($organisations ? "If you think you should be the manager for a {$providerMetadata[$providerId]['typeSingularUcfirst']} not listed here" : "You do not appear to be not registered as the manager for any {$providerMetadata[$providerId]['typeSingularUcfirst']}.<br />If you think you should be") . ", please " . ($providerMetadata[$providerId]['managerClaimFormLocation'] ? "use the <a href=\"{$providerMetadata[$providerId]['baseUrl']}{$providerMetadata[$providerId]['managerClaimFormLocation']}\">{$providerMetadata[$providerId]['typeSingularUcfirst']} manager claim form</a> elsewhere on the website.</p>" : "<a href=\"mailto:sysadmins@camvote.org\">contact the system administrator</a>.");
 			}
 
 			# Add each organisation
